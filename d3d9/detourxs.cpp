@@ -1,3 +1,4 @@
+#include "minilib.h"
 #include "detourxs.h"
 
 #pragma warning(disable: 4244 4311 4312 4715)

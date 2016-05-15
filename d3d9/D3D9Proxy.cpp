@@ -34,12 +34,12 @@ const char configTemplate[] =
 	"VSync = 1\r\n"
 	"\r\n"
 	"; Multi Sample Anti Aliasing: Smooth Borders\r\n"
-	"; Allowed Values:  Off: 0  /  On: 2-16\r\n"
+	"; Allowed Values:  Off: 0  /  On: 2, 4, 8\r\n"
 	"AA = 2\r\n"
 	"\r\n"
 	"; Anisotropic Filtering: Sharper Textures\r\n"
 	"; Allowed Values:  Off: 0  /  On: 2, 4, 8, 16\r\n"
-	"AF = 16";
+	"AF = 8";
 
 
 #ifdef _DEBUG

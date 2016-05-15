@@ -5,7 +5,6 @@
 #include "minilib.h"
 
 #include <d3d9.h>
-#include <d3dcompiler.h>
 
 #include "detourxs.h"
 

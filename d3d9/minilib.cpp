@@ -1,6 +1,5 @@
 #include "minilib.h"
 
-
 #pragma function(memset)
 extern "C" void* __cdecl memset(void* _Dst, int _Val, size_t _Size)
 {
@@ -28,10 +27,20 @@ void * __cdecl operator new(unsigned int bytes)
 {
   return HeapAlloc(GetProcessHeap(), 0, bytes);
 }
+
+void * __cdecl operator new[](unsigned int bytes)
+{
+	return HeapAlloc(GetProcessHeap(), 0, bytes);
+}
  
 void __cdecl operator delete(void *ptr)
 {
   if(ptr) HeapFree(GetProcessHeap(), 0, ptr);
+}
+
+void __cdecl operator delete(void *ptr, unsigned int size)
+{
+	if (ptr && size) HeapFree(GetProcessHeap(), 0, ptr);
 }
  
 extern "C" int __cdecl __purecall(void)
